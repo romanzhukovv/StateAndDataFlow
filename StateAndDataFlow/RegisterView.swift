@@ -36,7 +36,7 @@ extension RegisterView {
     private func registerUser() {
         if !name.isEmpty {
             user.name = name
-            user.isRegister.toggle()
+            StorageManager.shared.saveName(name: name)
         }
     }
 }
